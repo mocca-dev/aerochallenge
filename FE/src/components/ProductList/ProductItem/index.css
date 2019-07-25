@@ -1,0 +1,23 @@
+.item-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.item-container img {
+  width: 100%;
+}
+
+.item-name {
+  text-align: center;
+  color: black;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+}

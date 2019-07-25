@@ -1,0 +1,13 @@
+.price-container {
+  color: #006fe0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.original-price {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: initial;
+  text-decoration: line-through;
+}
