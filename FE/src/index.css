@@ -31,6 +31,7 @@ code {
 }
 
 .main-container {
+  margin-top: 70px;
   padding: 16px;
   padding-top: 0;
 }

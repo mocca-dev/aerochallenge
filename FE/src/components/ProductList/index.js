@@ -11,7 +11,6 @@ const ProductList = () => {
       const { products, ...metaData } = resp;
       setProducts(products);
       setMetaData(metaData);
-      console.log(products, metaData);
     });
   }, []);
 

@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {} from "./index.css";
 import Price from "./Price";
 import AddBtn from "./AddBtn";
 import UnitsBtn from "./UnitsBtn";
+import Context from "./../../../context";
+
+const plus = (id, dispatch) => {
+  dispatch({ type: "ADD_PRODUCT_UNIT", payload: { id } });
+};
+const minus = (id, dispatch) => {
+  dispatch({ type: "REMOVE_PRODUCT_UNIT", payload: { id } });
+};
 
 const ProductItem = ({ data }) => {
+  const { state, dispatch } = useContext(Context);
+
   const [showAddBtn, setShowAddBtn] = useState(true);
   const [showRemove, setShowRemove] = useState(false);
   const [count, setCount] = useState(1);
@@ -34,13 +44,14 @@ const ProductItem = ({ data }) => {
             setCount(1);
             setShowAddBtn(false);
             setShowRemove(true);
+            dispatch({ type: "ADD_PRODUCT", payload: { ...data } });
           }}
         />
       ) : (
         <UnitsBtn
           count={count}
-          plus={() => setCount(() => count + 1)}
-          minus={() => count && setCount(() => count - 1)}
+          plus={() => plus(data.id, dispatch)}
+          minus={() => minus(data.id, dispatch)}
         />
       )}
     </div>
