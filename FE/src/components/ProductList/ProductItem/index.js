@@ -12,13 +12,21 @@ const minus = (id, dispatch) => {
   dispatch({ type: "REMOVE_PRODUCT_UNIT", payload: { id } });
 };
 
+const itemAmmount = (id, state) => {
+  // const selectedItem = state.shopCart.productList.find(
+  //   product => product.id === id
+  // );
+  // return selectedItem.ammount ? selectedItem.ammount : 1;
+  return 1;
+};
+
 const ProductItem = ({ data }) => {
   const { state, dispatch } = useContext(Context);
 
   const [showAddBtn, setShowAddBtn] = useState(true);
   const [showRemove, setShowRemove] = useState(false);
   const [count, setCount] = useState(1);
-  const { name, price, originalPrice, presentation, photo, brand } = data;
+  const { id, name, price, originalPrice, presentation, photo, brand } = data;
   return (
     <div className="item-container">
       {showRemove && (
@@ -49,9 +57,9 @@ const ProductItem = ({ data }) => {
         />
       ) : (
         <UnitsBtn
-          count={count}
-          plus={() => plus(data.id, dispatch)}
-          minus={() => minus(data.id, dispatch)}
+          count={itemAmmount(id, state)}
+          plus={() => plus(id, dispatch)}
+          minus={() => minus(id, dispatch)}
         />
       )}
     </div>

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "./../../context";
 import {} from "./index.css";
 
 const Header = () => {
+  const { state, dispatch } = useContext(Context);
+
   return (
     <header>
       <span className="header-item-container">
@@ -11,7 +14,9 @@ const Header = () => {
       <span className="header-item-container">
         <span>$2,345</span>
         <span className="shopping-cart">
-          <span className="shopping-cart-badge">17</span>
+          <span className="shopping-cart-badge">
+            {state.shopCart.totalCount}
+          </span>
           <img
             className="shopping-cart-img"
             src="./assets/shopping-cart.png"
