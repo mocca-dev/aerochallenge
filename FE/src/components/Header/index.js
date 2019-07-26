@@ -10,13 +10,16 @@ const Header = () => {
       </span>
       <span className="header-item-container">
         <span>$2,345</span>
-        <img
-          className="shopping-cart-img"
-          src="./assets/shopping-cart.png"
-          height="22px"
-          width="21px"
-          alt="shopping-cart"
-        />
+        <span className="shopping-cart">
+          <span className="shopping-cart-badge">17</span>
+          <img
+            className="shopping-cart-img"
+            src="./assets/shopping-cart.png"
+            height="22px"
+            width="21px"
+            alt="shopping-cart"
+          />
+        </span>
       </span>
     </header>
   );
