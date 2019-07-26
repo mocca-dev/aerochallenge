@@ -12,8 +12,7 @@ const Price = ({ price, originalPrice, ammount }) => {
         <div>
           {price != originalPrice ? (
             <span>
-              <span className="original-price"> ${originalPrice}</span> - $
-              {price}
+              <span className="original-price"> ${originalPrice}</span> ${price}
             </span>
           ) : (
             <span>${price}</span>

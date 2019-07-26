@@ -1,0 +1,25 @@
+.units-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  margin: 16px 5px 5px 5px;
+  height: 32px;
+  color: #006fe0;
+  text-align: center;
+}
+
+.units-btn-container span {
+  font-weight: 700;
+}
+
+.units-btn {
+  width: 32px;
+  height: 32px;
+  background-color: #006fe0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}

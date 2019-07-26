@@ -8,6 +8,13 @@ html {
   box-sizing: inherit;
 }
 
+/* Solve the sticky outline in devices with touch input when click some element*/
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
