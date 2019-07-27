@@ -17,7 +17,6 @@ function calcTotalPriceAndTotalAmmount(state, id, symb) {
 }
 
 function appReducer(state, action) {
-  debugger;
   switch (action.type) {
     case "LOAD_PRODUCTS_LIST": {
       return {
