@@ -7,14 +7,16 @@ import appReducer from "./reducer";
 
 function App() {
   const [state, dispatch] = useReducer(appReducer, {
-    shopCart: { productList: [], totalCount: 0, totalPrice: 0 }
+    shopCart: { productList: [], totalCount: 0, totalPrice: 0 },
+    productList: [],
+    metaData: {}
   });
 
   return (
     <Context.Provider value={{ state, dispatch }}>
       <Header />
       <section className="main-container">
-        <SectionTitle title={"Almacén " + state.shopCart.productList.length} />
+        <SectionTitle title={"Almacén"} />
         <ProductList />
       </section>
     </Context.Provider>

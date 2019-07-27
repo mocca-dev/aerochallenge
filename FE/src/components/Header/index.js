@@ -3,7 +3,7 @@ import Context from "./../../context";
 import {} from "./index.css";
 
 const Header = () => {
-  const { state, dispatch } = useContext(Context);
+  const { state } = useContext(Context);
 
   return (
     <header>
@@ -12,7 +12,7 @@ const Header = () => {
         EZhop
       </span>
       <span className="header-item-container">
-        <span>$2,345</span>
+        <span>${state.shopCart.totalPrice.toFixed(2)}</span>
         <span className="shopping-cart">
           <span className="shopping-cart-badge">
             {state.shopCart.totalCount}
