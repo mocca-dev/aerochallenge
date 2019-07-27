@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <span className="header-item-container">
-        <img className="logo-img" src="./assets/CombinedShape.png" alt="logo" />
+        <img className="logo-img" src="./assets/logo.png" alt="logo" />
         EZhop
       </span>
       <span className="header-item-container">

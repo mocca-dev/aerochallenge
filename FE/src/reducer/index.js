@@ -17,11 +17,12 @@ function calcTotalPriceAndTotalAmmount(state, id, symb) {
 }
 
 function appReducer(state, action) {
+  debugger;
   switch (action.type) {
     case "LOAD_PRODUCTS_LIST": {
       return {
         ...state,
-        productList: action.payload
+        productList: [...state.productList, ...action.payload]
       };
     }
     case "LOAD_METADATA": {

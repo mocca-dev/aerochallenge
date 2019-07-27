@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 
-const offline = true;
+const offline = false;
 
 function cb(req, res, endpoint) {
   if (offline) {
@@ -16,14 +16,15 @@ function cb(req, res, endpoint) {
       res.send(content);
     });
   } else {
+    const newEndpoint = req.query ? endpoint + req.query.page : endpoint;
     request({
-      uri: "https://challenge-api.aerolab.co/" + endpoint
+      uri: "https://challenge-api.aerolab.co/" + newEndpoint
     }).pipe(res);
   }
 }
 
 app.use(cors());
-app.get("/products", (req, res) => cb(req, res, "products"));
+app.get("/products", (req, res) => cb(req, res, "products?page="));
 app.get("/categories", (req, res) => cb(req, res, "categories"));
 app.get("/dollar", (req, res) => cb(req, res, "dollar"));
 
