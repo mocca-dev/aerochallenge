@@ -6,6 +6,7 @@ import appReducer from "./reducer";
 
 function App() {
   const [state, dispatch] = useReducer(appReducer, {
+    isSynchronized: false,
     shopCart: { productList: [], totalCount: 0, totalPrice: 0 },
     productList: [],
     metaData: {}

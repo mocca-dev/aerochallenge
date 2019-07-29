@@ -4,6 +4,10 @@ import { fetchProductsByPage } from "./../../service";
 import ProductItem from "./ProductItem";
 import {} from "./index.css";
 
+const loadShopCartFromCache = (data, dispatch) => {
+  dispatch({ type: "LOAD_SHOP_CART", payload: data.productList });
+};
+
 const fetchAndLoadProductsByPage = (page, dispatch) => {
   fetchProductsByPage(page).then(resp => {
     const { products, ...metaData } = resp;
@@ -15,14 +19,34 @@ const fetchAndLoadProductsByPage = (page, dispatch) => {
 const ProductList = () => {
   const { state, dispatch } = useContext(Context);
   const [lastPage, setLastPage] = useState(2);
+
   useEffect(() => {
     fetchAndLoadProductsByPage(1, dispatch);
   }, [dispatch]);
 
+  useEffect(() => {
+    const cachedState = JSON.parse(localStorage.getItem("shopCart"));
+    if (cachedState) loadShopCartFromCache(cachedState, dispatch);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("shopCart", JSON.stringify(state.shopCart));
+  });
+
+  useEffect(() => {
+    if (
+      !state.isSynchronized &&
+      state.productList.length &&
+      state.shopCart.productList.length
+    ) {
+      dispatch({ type: "SYNC_PRODUCTS_LIST" });
+    }
+  }, [state.productList]);
+
   const { productList } = state;
 
   return (
-    <div className="list-container">
+    <div className="list-container center-width">
       {productList &&
         productList.map(product => (
           <ProductItem key={product.id} data={product} />

@@ -27,7 +27,7 @@ function appReducer(state, action) {
     case "LOAD_METADATA": {
       return {
         ...state,
-        metadata: action.payload
+        metaData: action.payload
       };
     }
     case "ADD_PRODUCT": {
@@ -36,7 +36,6 @@ function appReducer(state, action) {
         action.payload.id,
         1
       );
-
       return {
         ...state,
         shopCart: {
@@ -48,7 +47,6 @@ function appReducer(state, action) {
           totalPrice,
           totalCount
         },
-
         productList: [
           ...state.productList.map(product =>
             product.id === action.payload.id
@@ -59,6 +57,42 @@ function appReducer(state, action) {
               : product
           )
         ]
+      };
+    }
+    case "LOAD_SHOP_CART": {
+      // debugger;
+      let totalCount = 0,
+        totalPrice = 0;
+
+      action.payload.forEach(product => {
+        totalCount += product.ammount;
+        totalPrice += product.price * product.ammount;
+      });
+
+      return {
+        ...state,
+        shopCart: {
+          ...state.shopCart,
+          productList: action.payload,
+          totalPrice,
+          totalCount
+        }
+      };
+    }
+    case "SYNC_PRODUCTS_LIST": {
+      return {
+        ...state,
+        isSynchronized: true,
+        productList: state.productList.map(product => {
+          debugger;
+          const selectedPorduct = state.shopCart.productList.find(
+            productSel => productSel.id === product.id
+          );
+          if (selectedPorduct) {
+            return { ...product, ammount: selectedPorduct.ammount };
+          }
+          return { ...product };
+        })
       };
     }
     case "ADD_PRODUCT_UNIT": {
@@ -109,12 +143,13 @@ function appReducer(state, action) {
           totalPrice,
           totalCount,
           productList: [
-            ...state.shopCart.productList.map(
-              product =>
-                product.id === action.payload.id && {
-                  ...product,
-                  ammount
-                }
+            ...state.shopCart.productList.map(product =>
+              product.id === action.payload.id
+                ? {
+                    ...product,
+                    ammount
+                  }
+                : { ...product }
             )
           ]
         },

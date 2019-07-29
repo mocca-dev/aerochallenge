@@ -15,32 +15,18 @@ const minus = (id, dispatch) => {
 const ProductItem = ({ data }) => {
   const { dispatch } = useContext(Context);
 
-  const [showAddBtn, setShowAddBtn] = useState(true);
-  // const [showRemove, setShowRemove] = useState(false);
   const { id, name, price, originalPrice, photo, ammount } = data;
+
   return (
     <div className="item-container">
-      {/* {showRemove && (
-        <button
-          className="remove-btn"
-          onClick={() => {
-            setShowAddBtn(true);
-            // setShowRemove(false);
-          }}
-        >
-          X
-        </button>
-      )} */}
       <div>
         <img src={photo} alt="product-pic" />
       </div>
       <div className="item-name">{name}</div>
       <Price price={price} originalPrice={originalPrice} ammount={ammount} />
-      {showAddBtn ? (
+      {!data.ammount ? (
         <AddBtn
           add={() => {
-            setShowAddBtn(false);
-            // setShowRemove(true);
             dispatch({ type: "ADD_PRODUCT", payload: { ...data } });
           }}
         />
