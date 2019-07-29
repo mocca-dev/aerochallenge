@@ -35,3 +35,14 @@ code {
   padding: 16px;
   padding-top: 0;
 }
+
+.center-width {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+@media only screen and (min-width: 768px) {
+  .center-width {
+    max-width: 600px;
+  }
+}

@@ -1,6 +1,5 @@
 import React, { useReducer } from "react";
 import Header from "./components/Header";
-import SectionTitle from "./components/SectionTitle";
 import ProductList from "./components/ProductList";
 import Context from "./context";
 import appReducer from "./reducer";
@@ -16,7 +15,9 @@ function App() {
     <Context.Provider value={{ state, dispatch }}>
       <Header />
       <section className="main-container">
-        <SectionTitle title={"Almacén"} />
+        <div className="center-width">
+          <h2>Almacén</h2>
+        </div>
         <ProductList />
       </section>
     </Context.Provider>

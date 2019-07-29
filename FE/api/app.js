@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 
-const offline = false;
+const offline = true;
 
 function cb(req, res, endpoint) {
   if (offline) {
@@ -16,7 +16,8 @@ function cb(req, res, endpoint) {
       res.send(content);
     });
   } else {
-    const newEndpoint = req.query ? endpoint + req.query.page : endpoint;
+    const newEndpoint = req.query.page ? endpoint + req.query.page : endpoint;
+
     request({
       uri: "https://challenge-api.aerolab.co/" + newEndpoint
     }).pipe(res);

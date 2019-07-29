@@ -7,8 +7,9 @@
     { "src": "/api/app.js", "use": "@now/node-server" }
   ],
   "routes": [
-    { "src": "/api/.*", "dest": "/api/app.js" },
+    { "src": "/api/(.*)", "dest": "/api/app.js" },
     { "src": "^/static/(.*)", "dest": "/static/$1" },
+    { "src": "^/assets/(.*)", "dest": "/assets/$2" },
     { "src": ".*", "dest": "/index.html" }
   ]
 }

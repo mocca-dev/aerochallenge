@@ -4,9 +4,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   background-color: white;
   padding: 10px 15px;
   padding-right: 22px;
@@ -46,4 +44,10 @@ header {
   line-height: 14px;
   border: 2px solid white;
   color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
