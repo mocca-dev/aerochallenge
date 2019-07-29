@@ -60,7 +60,6 @@ function appReducer(state, action) {
       };
     }
     case "LOAD_SHOP_CART": {
-      // debugger;
       let totalCount = 0,
         totalPrice = 0;
 
@@ -84,7 +83,6 @@ function appReducer(state, action) {
         ...state,
         isSynchronized: true,
         productList: state.productList.map(product => {
-          debugger;
           const selectedPorduct = state.shopCart.productList.find(
             productSel => productSel.id === product.id
           );
