@@ -11,8 +11,10 @@ const loadShopCartFromCache = (data, dispatch) => {
 const fetchAndLoadProductsByPage = (page, dispatch) => {
   fetchProductsByPage(page).then(resp => {
     const { products, ...metaData } = resp;
-    dispatch({ type: "LOAD_PRODUCTS_LIST", payload: products });
-    dispatch({ type: "LOAD_METADATA", payload: metaData });
+    if (products && metaData) {
+      dispatch({ type: "LOAD_PRODUCTS_LIST", payload: products });
+      dispatch({ type: "LOAD_METADATA", payload: metaData });
+    }
   });
 };
 
@@ -47,10 +49,13 @@ const ProductList = () => {
 
   return (
     <div className="list-container center-width">
-      {productList &&
+      {productList.length ? (
         productList.map(product => (
           <ProductItem key={product.id} data={product} />
-        ))}
+        ))
+      ) : (
+        <p> No se encontraron productos para mostrar</p>
+      )}
 
       <button
         className="more-btn"

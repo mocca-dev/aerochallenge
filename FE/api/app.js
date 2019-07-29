@@ -50,17 +50,21 @@ function handleProductsReqs(req, res) {
       });
     });
   } else {
-    rp({
+    rp.get({
       uri: "https://challenge-api.aerolab.co/products?page=" + req.query.page
-    }).then(products => {
-      rp({
-        uri: "https://challenge-api.aerolab.co/dollar"
-      }).then(dollar => {
-        res.send(
-          processProducts(JSON.parse(products), JSON.parse(dollar).rate)
-        );
+    })
+      .then(products => {
+        rp.get({
+          uri: "https://challenge-api.aerolab.co/dollar"
+        }).then(dollar => {
+          res.send(
+            processProducts(JSON.parse(products), JSON.parse(dollar).rate)
+          );
+        });
+      })
+      .catch(e => {
+        res.status(400).send("End of list");
       });
-    });
   }
 }
 
