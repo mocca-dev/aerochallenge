@@ -27,7 +27,7 @@ const ProductList = () => {
   useEffect(() => {
     const cachedState = JSON.parse(localStorage.getItem("shopCart"));
     if (cachedState) loadShopCartFromCache(cachedState, dispatch);
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     localStorage.setItem("shopCart", JSON.stringify(state.shopCart));
@@ -41,7 +41,7 @@ const ProductList = () => {
     ) {
       dispatch({ type: "SYNC_PRODUCTS_LIST" });
     }
-  }, [state.productList]);
+  });
 
   const { productList } = state;
 

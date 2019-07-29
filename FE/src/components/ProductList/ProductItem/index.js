@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import {} from "./index.css";
 import Price from "./Price";
 import AddBtn from "./AddBtn";
