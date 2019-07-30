@@ -35,7 +35,7 @@ header {
   top: -6px;
   right: -10px;
   background-color: #006fe0;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: bold;
   border-radius: 50%;
   text-align: center;
@@ -50,4 +50,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.shop-cart-icon path,
+.logo-svg g {
+  fill: #006fe0;
 }

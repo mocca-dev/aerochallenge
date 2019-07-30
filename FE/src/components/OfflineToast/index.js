@@ -15,7 +15,7 @@ const OfflineToast = ({ sWPromise }) => {
         setShow(false);
       }, 7000);
     });
-  }, []);
+  }, [sWPromise]);
 
   useEffect(() => {
     function updateOnlineStatus(event) {
