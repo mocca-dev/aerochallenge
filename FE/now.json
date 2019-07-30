@@ -10,6 +10,15 @@
     { "src": "/api/(.*)", "dest": "/api/app.js" },
     { "src": "^/static/(.*)", "dest": "/static/$1" },
     { "src": "^/assets/(.*)", "dest": "/assets/$2" },
-    { "src": ".*", "dest": "/index.html" }
+    { "src": "^/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "^/asset-manifest.json", "dest": "/asset-manifest.json" },
+    { "src": "^/manifest.json", "dest": "/manifest.json" },
+    {
+      "src": "^/service-worker.js",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/service-worker.js"
+    },
+    { "src": "^/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
+    { "src": "^/(.*)", "dest": "/index.html" }
   ]
 }
