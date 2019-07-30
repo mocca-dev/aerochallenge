@@ -2,18 +2,20 @@ import React, { useEffect, useContext, useState } from "react";
 import Context from "./../../context";
 import { fetchProductsByPage } from "./../../service";
 import ProductItem from "./ProductItem";
+import { LoadingSVG } from "./../Icons/icons";
 import {} from "./index.css";
 
 const loadShopCartFromCache = (data, dispatch) => {
   dispatch({ type: "LOAD_SHOP_CART", payload: data.productList });
 };
 
-const fetchAndLoadProductsByPage = (page, dispatch) => {
+const fetchAndLoadProductsByPage = (page, dispatch, setIsLoading) => {
   fetchProductsByPage(page).then(resp => {
     const { products, ...metaData } = resp;
     if (products && metaData) {
       dispatch({ type: "LOAD_PRODUCTS_LIST", payload: products });
       dispatch({ type: "LOAD_METADATA", payload: metaData });
+      setIsLoading(false);
     }
   });
 };
@@ -21,9 +23,10 @@ const fetchAndLoadProductsByPage = (page, dispatch) => {
 const ProductList = () => {
   const { state, dispatch } = useContext(Context);
   const [lastPage, setLastPage] = useState(2);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchAndLoadProductsByPage(1, dispatch);
+    fetchAndLoadProductsByPage(1, dispatch, setIsLoading);
   }, [dispatch]);
 
   useEffect(() => {
@@ -56,13 +59,17 @@ const ProductList = () => {
       ) : (
         <p> No se encontraron productos para mostrar</p>
       )}
-
+      <div className="loaging-products-container">
+        {isLoading && <LoadingSVG />}
+      </div>
       <button
         className="more-btn"
         onClick={() => {
-          fetchAndLoadProductsByPage(lastPage, dispatch);
+          setIsLoading(true);
+          fetchAndLoadProductsByPage(lastPage, dispatch, setIsLoading);
           setLastPage(() => lastPage + 1);
         }}
+        disabled={isLoading}
       >
         Cargar más productos
       </button>

@@ -7,6 +7,21 @@
   padding: 15px;
 }
 
+.img-placeholder {
+  height: 162px;
+}
+
+.img-placeholder svg {
+  height: 30px;
+  position: relative;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+}
+
+.img-placeholder svg path {
+  fill: #006fe0;
+}
+
 .item-container img {
   width: 100%;
 }

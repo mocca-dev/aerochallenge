@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {} from "./index.css";
 import Price from "./Price";
 import AddBtn from "./AddBtn";
 import UnitsBtn from "./UnitsBtn";
 import Context from "./../../../context";
+import { LoadingSVG } from "../../Icons/icons";
 
 const plus = (id, dispatch) => {
   dispatch({ type: "ADD_PRODUCT_UNIT", payload: { id } });
@@ -14,13 +15,19 @@ const minus = (id, dispatch) => {
 
 const ProductItem = ({ data }) => {
   const { dispatch } = useContext(Context);
+  const [isLoadingImg, setIsLoadingImg] = useState(true);
 
   const { id, name, price, originalPrice, photo, ammount } = data;
 
   return (
     <div className="item-container">
-      <div>
-        <img src={photo} alt="product-pic" />
+      <div className="img-placeholder">
+        {isLoadingImg && <LoadingSVG />}
+        <img
+          src={photo}
+          alt="product-pic"
+          onLoad={e => setIsLoadingImg(false)}
+        />
       </div>
       <div className="item-name">{name}</div>
       <Price price={price} originalPrice={originalPrice} ammount={ammount} />

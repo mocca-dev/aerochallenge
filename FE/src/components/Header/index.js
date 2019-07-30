@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Context from "./../../context";
 import {} from "./index.css";
-import { LogoApp, ShopCartIcon } from "./icons.js";
+import { LogoApp, ShopCartIcon } from "./../Icons/icons";
 
 const Header = () => {
   const { state } = useContext(Context);
