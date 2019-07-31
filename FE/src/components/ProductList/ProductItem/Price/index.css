@@ -1,12 +1,12 @@
 .price-container {
-  color: #006fe0;
+  color: var(--main-blue);
   font-weight: bold;
   font-size: 1.1rem;
   text-align: center;
 }
 
 .original-price {
-  color: black;
+  color: var(--fg-color);
   font-size: 0.8rem;
   font-weight: initial;
   text-decoration: line-through;

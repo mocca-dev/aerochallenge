@@ -15,6 +15,13 @@ html {
   outline: none !important;
 }
 
+:root {
+  --main-blue: #006fe0;
+  --ligther-blue: #0070e0;
+  --fg-color: black;
+  --bg-color: white;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

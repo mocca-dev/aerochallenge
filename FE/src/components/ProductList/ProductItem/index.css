@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   display: flex;
-  background-color: white;
+  background-color: var(--bg-color);
   flex-direction: column;
   padding: 15px;
 }
@@ -19,7 +19,7 @@
 }
 
 .img-placeholder svg path {
-  fill: #006fe0;
+  fill: var(--main-blue);
 }
 
 .item-container img {
@@ -28,7 +28,7 @@
 
 .item-name {
   text-align: center;
-  color: black;
+  color: var(--fg-color);
   margin-top: 8px;
   margin-bottom: 12px;
   float: left;
