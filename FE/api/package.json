@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "now-start": "node .",
+    "start": "nodemon ."
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^1.19.1",
+    "request": "^2.88.0",
     "request-promise": "^4.2.4"
   }
 }

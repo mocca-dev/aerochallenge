@@ -69,8 +69,9 @@ function handleProductsReqs(req, res) {
 }
 
 app.use(cors());
-app.get("/products", (req, res) => handleProductsReqs(req, res));
-app.get("/categories", (req, res) => cb(req, res, "categories"));
-app.get("/dollar", (req, res) => cb(req, res, "dollar"));
+app.get("/api/products", (req, res) => handleProductsReqs(req, res));
+app.get("/api/categories", (req, res) => cb(req, res, "categories"));
+app.get("/api/dollar", (req, res) => cb(req, res, "dollar"));
 
-app.listen(3001, console.log("LISTENING ON 3001"));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Listening on port ${port}`));
