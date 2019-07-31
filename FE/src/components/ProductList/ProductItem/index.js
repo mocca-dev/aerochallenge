@@ -20,7 +20,7 @@ const ProductItem = ({ data }) => {
   const { id, name, price, originalPrice, photo, ammount } = data;
 
   return (
-    <div className="item-container">
+    <li className="item-container">
       <div className="img-placeholder">
         {isLoadingImg && <LoadingSVG />}
         <img
@@ -44,7 +44,7 @@ const ProductItem = ({ data }) => {
           minus={() => minus(id, dispatch)}
         />
       )}
-    </div>
+    </li>
   );
 };
 
