@@ -1,68 +1,166 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div id="top"></div>
 
-## Available Scripts
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/mocca-dev/aerochallenge.git">
+    <img src="readme-images/logo.png" alt="Logo" height="80">
+  </a>
 
-### `npm start`
+<h3 align="center">ReactChat</h3>
+ 
+  <p align="center">
+    This is a simple React chat app to practice this type of interview excercises. 
+    <br />
+    <a href="https://aerochallenge.surge.sh/">View Demo</a>
+  </p>
+</div>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center">
+  <img src="readme-images/aerochallenge-score.png" alt="Logo" height="80">
+</div>
+<br>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Installation and Startup</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#prerequisites">Home</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<div align="center">
+  <img src="readme-images/aerochallenge-screenshot.png" alt="Logo" height="400">
+</div>
+<br>
+<br>
+<p>
+  This is a simple shopping cart app made with ReactJS and Vercel. Here I tried to practice React hooks and the state management with Context API and useReducer hook. This is inspired by a excercise from an interview of a software company.
+</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Built With
 
-### `npm run eject`
+* [React.js ⚛](https://reactjs.org/)
+* [Vercel ▲](https://vercel.com/)
+* [Context API (state manegement)](https://reactjs.org/docs/context.html)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Learn More
+This app is made with create-react-app so the installation process is simple.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation and Startup (Client side)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repo
+   ```sh
+   git clone https://github.com/mocca-dev/aerochallenge.git
+   ```
+2. Go to the chat app folder
+   ```sh
+   cd FE
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Finally you have to simply run the app and you're ready to go with the client.
+   ```sh
+   npm start
+   ```
+### Installation and Startup (Server side)
 
-### Code Splitting
+1. Go back to the main folder
+   ```sh
+   cd api
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Finally you have to simply run the server and you're ready to go. Enjoy!
+   ```sh
+   node start
+   ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+<!-- USAGE EXAMPLES -->
+## Usage
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Home
 
-### Advanced Configuration
+It's very straightfoward, just click on the "Agregar al carrito" button to add the product that you want and it will be added to the shopping cart.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+<!-- LICENSE -->
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Nicolás Tonelli - nicolastonelli1406@gmail.com
+
+Project Link: [https://github.com/mocca-dev/aerochallenge.git](https://github.com/mocca-dev/aerochallenge.git)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in//nicolás-tonelli-181624b9/
+[product-screenshot]: images/screenshot.png
