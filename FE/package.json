@@ -14,7 +14,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "react-scripts build && serve -s build",
-    "now-build": "react-scripts build && mv build dist"
+    "now-build": "react-scripts build && mv build dist",
+    "deploy": "npm run build && npm run clean-map && cd build && surge -d https://aerochallenge.surge.sh && npm run play-finish-sound",
+    "clean-map": "rimraf build/**/*.map",
+    "play-finish-sound": "afplay /System/Library/Sounds/Glass.aiff"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +34,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://aerochallenge.ntoneko.vercel.app"
 }
