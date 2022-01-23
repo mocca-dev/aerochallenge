@@ -14,7 +14,7 @@
   <p align="center">
     This is a simple React chat app to practice this type of interview excercises. 
     <br />
-    <a href="https://aerochallenge.surge.sh/">View Demo</a>
+    <a href="https://aerochallenge.ntoneko.vercel.app/">View Demo</a>
   </p>
 </div>
 
