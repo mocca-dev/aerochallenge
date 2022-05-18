@@ -9,10 +9,10 @@
     <img src="readme-images/logo.png" alt="Logo" height="80">
   </a>
 
-<h3 align="center">ReactChat</h3>
+<h3 align="center">AeroChallenge</h3>
  
   <p align="center">
-    This is a simple React chat app to practice this type of interview excercises. 
+    This is a simple Shooping Cart app to practice this type of interview excercises. 
     <br />
     <a href="https://aerochallenge.ntoneko.vercel.app/">View Demo</a>
   </p>
@@ -36,7 +36,10 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Installation and Startup</a></li>
+        <li><a href="#installation-and-startup-client-side">Installation and Startup (Client side)</a></li>
+      </ul>
+      <ul>
+        <li><a href="#installation-and-startup-server-side">Installation and Startup (Server side)</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a>
@@ -49,10 +52,10 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 <div align="center">
   <img src="readme-images/aerochallenge-screenshot.png" alt="Logo" height="400">
 </div>
@@ -63,19 +66,16 @@
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
-* [React.js ⚛](https://reactjs.org/)
-* [Vercel ▲](https://vercel.com/)
-* [Context API (state manegement)](https://reactjs.org/docs/context.html)
+- [React.js ⚛](https://reactjs.org/)
+- [Vercel ▲](https://vercel.com/)
+- [Context API (state manegement)](https://reactjs.org/docs/context.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This app is made with create-react-app so the installation process is simple.
@@ -98,6 +98,7 @@ This app is made with create-react-app so the installation process is simple.
    ```sh
    npm start
    ```
+
 ### Installation and Startup (Server side)
 
 1. Go back to the main folder
@@ -115,9 +116,8 @@ This app is made with create-react-app so the installation process is simple.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 ### Home
@@ -126,18 +126,16 @@ It's very straightfoward, just click on the "Agregar al carrito" button to add t
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Nicolás Tonelli - nicolastonelli1406@gmail.com
@@ -146,11 +144,9 @@ Project Link: [https://github.com/mocca-dev/aerochallenge.git](https://github.co
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 [contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
