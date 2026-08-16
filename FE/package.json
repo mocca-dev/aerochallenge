@@ -41,6 +41,7 @@
     "underscore": "^1.13.7",
     "svgo": "^2.8.0",
     "serialize-javascript": "^7.1.0",
-    "postcss": "^8.4.32"
+    "postcss": "^8.4.32",
+    "webpack-dev-server": "^4.15.2"
   }
 }
