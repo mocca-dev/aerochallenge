@@ -38,6 +38,7 @@
   "overrides": {
     "semver": "^7.6.0",
     "nth-check": "^2.1.0",
-    "underscore": "^1.13.7"
+    "underscore": "^1.13.7",
+    "svgo": "^2.8.0"
   }
 }
