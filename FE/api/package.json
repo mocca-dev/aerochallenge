@@ -17,6 +17,7 @@
     "request-promise": "^4.2.4"
   },
   "overrides": {
-    "form-data": "^2.3.3"
+    "form-data": "^2.3.3",
+    "tough-cookie": "^4.1.2"
   }
 }
