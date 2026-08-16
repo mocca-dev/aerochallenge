@@ -10,11 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "nodemon": "^3.0.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "nodemon": "^3.0.1"
   },
   "overrides": {
     "form-data": "^2.3.3",
