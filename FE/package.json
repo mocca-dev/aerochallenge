@@ -34,5 +34,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://aerochallenge.ntoneko.vercel.app"
+  "proxy": "https://aerochallenge.ntoneko.vercel.app",
+  "overrides": {
+    "semver": "^7.6.0"
+  }
 }
