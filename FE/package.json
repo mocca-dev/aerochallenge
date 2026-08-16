@@ -17,7 +17,8 @@
     "now-build": "react-scripts build && mv build dist",
     "deploy": "npm run build && npm run clean-map && cd build && surge -d https://aerochallenge.surge.sh && npm run play-finish-sound",
     "clean-map": "rimraf build/**/*.map",
-    "play-finish-sound": "afplay /System/Library/Sounds/Glass.aiff"
+    "play-finish-sound": "afplay /System/Library/Sounds/Glass.aiff",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +43,10 @@
     "svgo": "^2.8.0",
     "serialize-javascript": "^7.1.0",
     "postcss": "^8.4.32",
-    "webpack-dev-server": "^4.15.2"
+    "webpack-dev-server": "^5.2.1",
+    "uuid": "^11.1.1"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.1"
   }
 }
