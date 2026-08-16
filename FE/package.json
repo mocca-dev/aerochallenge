@@ -37,6 +37,7 @@
   "proxy": "https://aerochallenge.ntoneko.vercel.app",
   "overrides": {
     "semver": "^7.6.0",
-    "nth-check": "^2.1.0"
+    "nth-check": "^2.1.0",
+    "underscore": "^1.13.7"
   }
 }
